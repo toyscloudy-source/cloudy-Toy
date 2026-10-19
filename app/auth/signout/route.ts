@@ -1,0 +1,6 @@
+import { NextResponse } from "next/server";
+import { createClient, supabaseConfigured } from "@/lib/supabase/server";
+export async function POST(req: Request) {
+  if (supabaseConfigured()) await (await createClient()).auth.signOut();
+  return NextResponse.redirect(new URL("/", req.url), 303);
+}

@@ -1,0 +1,10 @@
+.data
+node_modules
+.next
+.env
+.env.local
+.env*.local
+*.tsbuildinfo
+.open-next
+.wrangler
+.dev.vars
